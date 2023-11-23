@@ -7,7 +7,7 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class    UserDaoJDBCImpl implements UserDao {
+public class UserDaoJDBCImpl implements UserDao {
     private static final Connection connection = Util.getConnection();
     public UserDaoJDBCImpl() {
 
@@ -72,7 +72,6 @@ public class    UserDaoJDBCImpl implements UserDao {
                 user.setLastName(resultSet.getString("lastName"));
                 user.setAge(resultSet.getByte("age"));
                 userList.add(user);
-                System.out.println(user);
             }
         } catch (SQLException e) {
             throw new RuntimeException();
